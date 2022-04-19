@@ -9,6 +9,13 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" exact element={<h2>this is the home page</h2>}/>
+        <Route path="/user-settings" exact element={<h2>this is the home page</h2>}/>
+        <Route path="/post" exact element={<h2>this is the home page</h2>}/>
+        <Route path="/publish-post" exact element={<h2>this is the home page</h2>}/>
+        <Route path="/login" exact element={<h2>this is the home page</h2>}/>
+        <Route path="/signup" exact element={<h2>this is the home page</h2>}/>
+        <Route path="/myprofile" exact element={<h2>this is the home page</h2>}/>
+        <Route path="/user" exact element={<h2>this is the home page</h2>}/>
       </Routes>
     </>
   );
