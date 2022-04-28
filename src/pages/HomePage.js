@@ -2,6 +2,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import MenuSection from '../components/MenuSection'
 import FeedsContainer from '../components/feeds/feedsContainer'
 import ProfileSectionContainer from '../components/profileSection/profileSectionContainer';
+import RecentFollowers from '../components/followersSection/recentFollowersSection';
 
 const HomePage = () => {
   return <>
@@ -15,9 +16,10 @@ const HomePage = () => {
         </Col>
         <Col xs={4}>
             <ProfileSectionContainer/>
+            <RecentFollowers />
         </Col>
       </Row>
     </Container>
-  </>;
+  </>
 };
 export default HomePage;
