@@ -5,7 +5,7 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import SearchIcon from "@material-ui/icons/Search";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 
-import profileImage from "./assets/profile.jpg";
+import profileImage from "../assets/profile.jpg";
 
 const useStyles = makeStyles((theme) => ({
   textField: {
