@@ -22,16 +22,16 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: "10px",
     padding: "4px",
     borderRadius: "12px",
-    backgroundColor: "#F7F5F2",
+    backgroundColor: "var(--third-color)",
   },
   logo: {
     marginLeft: "20px",
-    color: "#F56D91",
+    color: "var(--fourth-color)",
     fontFamily: "karla",
     fontSize: "25px",
   },
   vertical: {
-    borderLeft: "2px solid #8D8DAA",
+    borderLeft: "2px solid var(--first-color)",
     height: "35px",
     left: "50%",
   },
@@ -39,17 +39,17 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     columnGap: "15px",
     alignItems: "center",
-    color: "#8D8DAA",
+    color: "var(--first-color)",
   },
   profileImage: {
     height: "43px",
     width: "43px",
     objectFit: "cover",
-    border: "1px solid #F56D91",
+    border: "1px solid var(--fourth-color)",
     borderRadius: "10px",
   },
   userName: {
-    color: "#8D8DAA",
+    color: "var(--first-color)",
     fontFamily: "karla",
     fontSize: "18px",
   },
@@ -83,7 +83,7 @@ const Header = () => {
                   placeholder="Search for something..."
                   type="search"
                   className={classes.textField}
-                  margin="auto"
+                  margin="none"
                   variant="standard"
                   InputProps={{
                     disableUnderline: true,
@@ -101,7 +101,7 @@ const Header = () => {
           <Navbar.Brand></Navbar.Brand>
           <Navbar.Brand></Navbar.Brand>
           <Navbar.Brand className={classes.rightMenu}>
-            <NotificationsIcon style={{ fill: "#8D8DAA" }} />
+            <NotificationsIcon style={{ fill: "var(--first-color)" }} />
             <div className={classes.vertical}></div>
             <div className={classes.settingsMenu}>
               <img

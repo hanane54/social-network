@@ -4,11 +4,11 @@ import { MenuData } from "./menuData";
 
 const useStyles = makeStyles((theme)=>({
     container:{
-        marginTop: "1%",
+        marginTop: "8px",
         marginLeft:"2%",
         backgroundColor:"#FFFFFF",
-        width:"18%",
-        height:"50%",
+        // width:"18%",
+        // height:"50%",
         borderRadius:"20px",
         alignItems:"center"
     },
@@ -51,11 +51,7 @@ const useStyles = makeStyles((theme)=>({
          },
          "&#active":{
             color:"#F56D91",
-
-             
          },
-         
-
     },
     icon:{
         flex:"3"
