@@ -4,11 +4,12 @@ import {Routes, Route} from "react-router-dom";
 import Header from "./components/header/header";
 import HomePage from './pages/HomePage';
 import Menu from "./components/menu/menu";
+import Signup from './pages/Signup';
 
 function App() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div style={{paddingTop:'64px', backgroundColor:'#F7F5F2', zIndex:0}}>
         {/* <Menu></Menu> */}
         <Routes>
@@ -18,7 +19,7 @@ function App() {
         <Route path="/publish-post" exact element={<h2>this is the home page</h2>}/>
         <Route path="/saved-post" exact element={<h2>this is the home page</h2>} />
         <Route path="/login" exact element={<h2>this is the home page</h2>}/>
-        <Route path="/signup" exact element={<h2>this is the home page</h2>}/>
+        <Route path="/sign-up" exact element={<Signup/>}/>
         <Route path="/my-profile" exact element={<h2>this is the home page</h2>}/>
         <Route path="/user" exact element={<h2>this is the home page</h2>}/>
       </Routes>

@@ -3,9 +3,13 @@ import Menu from '../components/menu/menu'
 import FeedsContainer from '../components/feeds/feedsContainer'
 import ProfileSectionContainer from '../components/profileSection/profileSectionContainer';
 import RecentFollowers from '../components/followersSection/recentFollowersSection';
+import Header from "../components/header/header";
+
 
 const HomePage = () => {
   return <>
+      <Header />
+
     <Container fluid>
       <Row>
         <Col xs={2}>
