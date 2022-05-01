@@ -1,0 +1,13 @@
+/* .postsContainer{
+    margin-top: 8px;
+    padding: 10px;
+} */
+.post {
+  margin-top: 8px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: white;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,72 @@
+*{
+    font-family: 'karla';
+}
+.userImage{
+    width: 55px;
+    height: 55px;
+    margin-right:10px;
+    object-fit: cover;
+    border-radius: 50px !important;
+}
+.postUserInfo{
+    display: flex;
+}
+.postHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+}
+.postHeader p{
+    color: var(--first-color);
+}
+.postHeader a {
+    text-decoration: none;
+    color: black;
+}
+.postHeader a:hover{
+    color: black;
+}
+.postQuestion{
+    padding: 0px 8px 0px 8px;
+    color: var(--first-color);
+}
+.showOrHide{
+    color: var(--fourth-color);
+    cursor: pointer;
+    text-decoration: underline;
+}
+.article{
+    color: var(--first-color);
+    line-height:normal;
+}
+.postImage{
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.commentSection{
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 12px;
+    color: var(--first-color);
+}
+.commentSection a,.commentSection a:hover{
+    text-decoration: none;
+    color: var(--first-color);
+}
+.heartIcon{
+    color: var(--first-color);
+    /* width: ; */
+}
+.newComment{
+    background-color: var(--third-color);
+    flex: 1;
+    border-radius: 20px;
+    text-align: center;
+    padding: 5px;
+}

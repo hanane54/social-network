@@ -3,7 +3,7 @@ import React from 'react';
 import {Routes, Route} from "react-router-dom";
 import Header from "./components/header/header";
 import HomePage from './pages/HomePage';
-import Menu from "./components/menu/menu";
+// import Menu from "./components/menu/menu";
 
 function App() {
   return (
