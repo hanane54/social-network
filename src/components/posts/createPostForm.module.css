@@ -3,5 +3,89 @@
     margin-top: 8px;
     margin-right: 10px;
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px;
+    font-family: 'karla';
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.userImage{
+    width: 55px;
+    height: 55px;
+    margin-right:10px;
+    object-fit: cover;
+    border: 1px solid var(--fourth-color);
+}
+.userSection {
+    margin-bottom: 20px;
+}
+.explain{
+    color: var(--first-color);
+    font-weight: normal;
+}
+.singleInput{
+    margin: 10px 8px 10px 8px;
+}
+.radioBtns{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    width: 82%;
+}
+.radioBtns label{
+    display: flex;
+    color: var(--first-color);
+    font-family: 'karla';
+    align-items: center;
+    overflow: hidden;
+    transition: 00.25s ease; 
+    background-color: var(--second-color);
+    margin: 0px 10px 0px 10px;
+    padding: 4px;
+    border-radius: 25px;
+}
+.radioBtns input:checked{
+    accent-color: var(--fourth-color);
+}
+.radioBtns span{
+    display: flex;
+    align-items: center;
+    padding: 0.375em 0.75em 0.375em 0.375em ;
+    border-radius: 99em;
+    display: flex;
+	
+			border-radius: 50%;
+			margin-right: 0.375em;
+            margin-left: 0.375em;
+			transition: 0.25s ease;
+			
+}
+
+.radioBtns label:hover{
+    background-color: var(--fourth-color);
+    cursor: pointer;
+    color: white;
+}
+.question, .question:focus{
+    border: none;
+    background-color: var(--second-color);
+    border-radius: 25px;
+    padding: 7px;
+    width: 70%;
+    outline: none;
+}
+
+.articleText, .articleText:focus{
+    background-color: var(--second-color);
+    border: none;
+    border-radius: 25px;
+    width: 70%;
+    padding: 7px;
+    outline: none;
+}
+.fileInput{
+    background-color: var(--second-color);
+    padding: 8px;
+    width: 70%;
+    border-radius: 25px;
 }
