@@ -3,6 +3,7 @@ import React from 'react';
 import {Routes, Route} from "react-router-dom";
 import Header from "./components/header/header";
 import HomePage from './pages/HomePage';
+import PublicationPage from './pages/publicationPage'
 // import Menu from "./components/menu/menu";
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
         <Routes>
         <Route path="/" exact element={<HomePage className="element"/>}/>
         <Route path="/user-settings" exact element={<h2>this is the home page</h2>}/>
-        <Route path="/post" exact element={<h2>this is the home page</h2>}/>
+        <Route path="/post" exact element={<PublicationPage className="element"/>}/>
         <Route path="/publish-post" exact element={<h2>this is the home page</h2>}/>
         <Route path="/saved-post" exact element={<h2>this is the home page</h2>} />
         <Route path="/login" exact element={<h2>this is the home page</h2>}/>

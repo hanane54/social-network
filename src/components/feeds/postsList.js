@@ -1,14 +1,27 @@
-import styles from "./postsList.module.css";
 import PostsData from "./postsData";
 import Post from "./post";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles((theme) => ({
+  post:{
+    marginTop:'8px',
+    borderRadius:'20px',
+    padding:'10px',
+    backgroundColor:'white',
+    textAlign:'justify',
+    textJustify:'inter-word',
+    marginBottom:'10px',
+  }
+}));
 
 const PostsList = () => {
+  const classes = useStyles();
   return (
     <>
-      <div className={styles.postsContainer}>
+      <div className={classes.postsContainer}>
         {PostsData.map((post, key) => {
           return (
-            <div className={styles.post} key={key}>
+            <div className={classes.post} key={key}>
               <Post
                 postId={post.postId}
                 postUser={post.postUser}

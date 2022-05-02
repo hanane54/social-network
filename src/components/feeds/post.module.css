@@ -20,11 +20,8 @@
 .postHeader p{
     color: var(--first-color);
 }
-.postHeader a {
+.postHeader a, .postHeader a:hover {
     text-decoration: none;
-    color: black;
-}
-.postHeader a:hover{
     color: black;
 }
 .postQuestion{
