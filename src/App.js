@@ -6,6 +6,9 @@ import HomePage from './pages/HomePage';
 import Menu from "./components/menu/menu";
 import Signup from './pages/Signup';
 
+import PublicationPage from './pages/publicationPage'
+
+
 function App() {
   return (
     <>
@@ -15,7 +18,7 @@ function App() {
         <Routes>
         <Route path="/" exact element={<HomePage className="element"/>}/>
         <Route path="/user-settings" exact element={<h2>this is the home page</h2>}/>
-        <Route path="/post" exact element={<h2>this is the home page</h2>}/>
+        <Route path="/post" exact element={<PublicationPage className="element"/>}/>
         <Route path="/publish-post" exact element={<h2>this is the home page</h2>}/>
         <Route path="/saved-post" exact element={<h2>this is the home page</h2>} />
         <Route path="/login" exact element={<h2>this is the home page</h2>}/>
