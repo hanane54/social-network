@@ -5,39 +5,37 @@ import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   followersContainer: {
     backgroundColor: "white",
-    textAlign:'center',
-    fontFamily:'karla',
-    borderRadius:'20px',
+    textAlign: "center",
+    fontFamily: "karla",
+    borderRadius: "20px",
   },
-  title:{
-      textAlign:'center',
-      paddingTop:'14px',
-      color:'var(--first-color)'
+  title: {
+    textAlign: "center",
+    paddingTop: "14px",
+    color: "var(--first-color)",
   },
-  list:{
-      listStyle:'none'
+  list: {
+    listStyle: "none",
   },
-  follower:{
-      paddingBottom:'10px'
+  follower: {
+    paddingBottom: "8px",
   },
-  followerImage:{
-      width:'55px',
-    height:'55px',
-    marginRight:'10px',
-    objectFit:'cover',
-    borderRadius:'50% !important',
-    border:'1px solid var(--fourth-color)',
+  followerImage: {
+    width: "45px",
+    height: "45px",
+    marginRight: "10px",
+    objectFit: "cover",
+    borderRadius: "50% !important",
+    border: "1px solid var(--fourth-color)",
   },
-  followerLink:{
-      textDecoration:'none',
-      color:'var(--first-color)',
-      '&:hover': {
-        textDecoration: 'none',
-        color:"var(--fourth-color)"
-        
-     },
-  }
-
+  followerLink: {
+    textDecoration: "none",
+    color: "var(--first-color)",
+    "&:hover": {
+      textDecoration: "none",
+      color: "var(--fourth-color)",
+    },
+  },
 }));
 
 const RecentFollowers = () => {
@@ -51,14 +49,17 @@ const RecentFollowers = () => {
           {FollowersData.map((val, key) => {
             return (
               <li className={classes.follower} key={key}>
-                  <a href="#" className={classes.followerLink}>
-                  <Image src={val.image} rounded className={classes.followerImage}/>
+                <a href="#" className={classes.followerLink}>
+                  <Image
+                    src={val.image}
+                    rounded
+                    className={classes.followerImage}
+                  />
                   {val.name}
-                  </a>
+                </a>
               </li>
             );
           })}
-
         </ul>
       </div>
     </>
