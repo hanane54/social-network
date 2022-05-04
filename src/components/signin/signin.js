@@ -1,7 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 import React from "react";
 import { Link } from 'react-router-dom';
-import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 
@@ -12,22 +11,20 @@ const useStyles = makeStyles((theme) => ({
         width: "100%",
         marginTop: "-3%"
 
-
     },
-    welcome: {
-        textAlign: "center",
-        fontWeight: "bold",
-        fontSize: "40px",
-        color: "var(--first-color)"
-
-    },
+    
     logo: {
         backgroundColor: "var(--fourth-color)",
         borderRadius: "12px",
         fontSize: "30px",
         color: "#FFFFFF",
         boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-        padding: "6px"
+        width:"15%",
+        padding: "4px",
+        textAlign: "center",
+        margin: "auto",
+
+
 
 
 
@@ -41,23 +38,20 @@ const useStyles = makeStyles((theme) => ({
         width: "50%",
         height: "50%",
         padding: "4%",
-        paddingBottom: "5%",
+        paddingBottom: "3%",
         paddingTop: "2%",
 
     },
     txt: {
-        marginLeft: "-20%",
+        marginLeft: "-82%",
         color: "var(--third-color)",
         fontWeight: "550",
         fontFamily: "Calibri",
         fontSize: "45px",
 
     },
-    point: {
-        color: "var(--fourth-color)",
-        fontSize: "50px"
-    },
-    question: {
+    
+    do: {
         marginLeft: "-57%",
         marginTop: "-3%",
         color: "var(--third-color)",
@@ -67,18 +61,12 @@ const useStyles = makeStyles((theme) => ({
 
     },
     login: {
-        textDecoration: "none",
         color: "var(--fourth-color)",
-        fontWeight: "bold",
-        fontSize: "18px",
-        '&:hover': {
-            color: "var(--fourth-color)",
-
-
-        }
+        fontWeight:"bold",
+        fontSize:"18px",
+        
     },
     form: {
-
         marginTop: "5%"
 
     },
@@ -86,9 +74,8 @@ const useStyles = makeStyles((theme) => ({
         height: "1.5rem",
         width: "1.5rem",
         color: "var(--fourth-color)",
-
         padding: "4px",
-
+        
 
     },
     div_input: {
@@ -107,11 +94,11 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: "9px",
         paddingBottom: "9px",
         paddingLeft: "25px",
+        color: "var(--first-color)",
         '&:focus': {
             outline: "none",
             border: "1px solid var(--fourth-color)"
-        },
-        color: "var(--first-color)",
+        }
 
 
     },
@@ -125,39 +112,52 @@ const useStyles = makeStyles((theme) => ({
         padding: "5px",
         fontFamily: "Calibri",
         fontSize: "20px",
-        marginRight: "4%",
-        marginTop: "7%",
+        margin:"auto",
+        marginTop:"8%",
         fontWeight: "570"
     },
-    btn2: {
-        color: "var(--first-color)",
-        backgroundColor: "var(--third-color)",
-        borderRadius: "23px",
-        border: "1px",
-        // boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-        width: "25%",
-        padding: "5px",
-        fontFamily: "Calibri",
-        fontSize: "20px",
-        marginTop: "7%"
-
+    forgotpasswd:{
+        textDecoration:"underline",
+        color:"var(--third-color)",
+        textAlign: "center",
+        '&:hover': {
+            color: "var(--third-color)",
+        }
+    },
+    question:{
+        textAlign: "center",
+        paddingTop:"1%",
+        paddingBottom:"2%",
+        color:"var(--first-color)",
+        fontWeight:"bold"
 
 
     },
+    link:{
+        textDecoration: "none",
+        color: "var(--fourth-color)",
+        fontWeight: "bold",
+        fontSize: "18px",
+        '&:hover': {
+            color: "var(--fourth-color)",
+        }
+    },
+    
+   
 
 }));
-function Register() {
+function Signin() {
     const classes = useStyles();
     return (
         <div className={classes.signup}>
-            <div className={classes.welcome}>
-                Welcome to <span className={classes.logo}>Logo name</span>
+            <div className={classes.logo}>
+               Logo name
             </div>
             <div className={classes.container}>
-                <h1 className={classes.txt}>Create new account<span className={classes.point}>.</span></h1>
-                <div className={classes.question}>
-                    <span>Already a Member?</span>
-                    <span ><Link to="/login" className={classes.login}>Login</Link></span>
+                <h1 className={classes.txt}>Login</h1>
+                <div className={classes.do}>
+                    <span>Login to get and spread </span>
+                    <span className={classes.login} >knowledge</span>
                 </div>
                 <form className={classes.form}>
                     {/* <label className="label">Name</label>
@@ -166,10 +166,7 @@ function Register() {
                     {/* <label>Username</label> */}
                     {/* <input/> */}
                     {/* <label className="label">Name</label> */}
-                    <div className={classes.wrapper}>
-                        <div class={classes.icon}><PersonOutlineIcon /></div>
-                        <div className={classes.div_input}><input className={classes.input} type="text" placeholder="Username" /></div>
-                    </div>
+                    
                     <div className={classes.wrapper}>
                         <div class={classes.icon}><MailOutlineIcon /></div>
                         <div className={classes.div_input}><input className={classes.input} type="email" placeholder="E-mail" /></div>
@@ -181,26 +178,23 @@ function Register() {
 
                     </div>
 
-                    <div className={classes.wrapper}>
-                        <div class={classes.icon}><VpnKeyIcon /></div>
-                        <div className={classes.div_input}><input className={classes.input} type="password" placeholder="Confirm password" /></div>
-
-                    </div>
+                    
 
                     {/* <button onClick={handleSubmit} className="btn" type="submit">
                     Submit
                     </button> */}
-                    <button className={classes.btn1} type="submit"> Sign up</button>
-                    <button className={classes.btn2} type=""> Cancel</button>
+                    <button className={classes.btn1} type="submit"> Login</button>
 
 
                 </form>
+                <Link to="/" className={classes.forgotpasswd}>Forgot password?</Link>
 
             </div>
+            <div className={classes.question}>Don't have an account? <span ><Link to="/sign-up" className={classes.link}>Sign up</Link></span></div>
         </div>
     );
 
 
 
 }
-export default Register;
+export default Signin;
