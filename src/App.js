@@ -7,6 +7,7 @@ import Menu from "./components/menu/menu";
 import Signup from './pages/Signup';
 import PublicationPage from './pages/publicationPage'
 import Login from './pages/Login';
+import ProfilePage from "./pages/ProfilePage"
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
         <Route path="/saved-post" exact element={<h2>this is the home page</h2>} />
         <Route path="/login" exact element={<Login/>}/>
         <Route path="/sign-up" exact element={<Signup/>}/>
-        <Route path="/my-profile" exact element={<h2>this is the home page</h2>}/>
+        <Route path="/my-profile" exact element={<ProfilePage/>}/>
         <Route path="/user" exact element={<h2>this is the home page</h2>}/>
       </Routes>
       </div>
