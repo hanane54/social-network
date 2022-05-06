@@ -12,7 +12,7 @@ const CreatePostForm = () => {
         </div>
         <form className={styles.form}>
           <div className={styles.singleInput}>
-            <label for="question">Your question</label>
+            <label htmlFor="question">Your question</label>
             <br />
             <input
               type="text"
@@ -23,66 +23,85 @@ const CreatePostForm = () => {
             <br />
           </div>
           <div className={styles.singleInput}>
-            <label for="article">Your article</label>
+            <label htmlFor="article">Your article</label>
             <br />
-            <textarea id="article" 
-            className={styles.articleText}
-            name="article" rows="4" cols="50"></textarea>
-            <br />
-          </div>
-          <div className={styles.singleInput}>
-            <label for="postImg">Add a picture</label>
-            <br />
-            <input 
-            type="file" name="postImg" value="" id="postImg"
-            className={styles.fileInput} ></input>
+            <textarea
+              id="article"
+              className={styles.articleText}
+              name="article"
+              rows="4"
+              cols="50"
+            ></textarea>
             <br />
           </div>
           <div className={styles.singleInput}>
-            <label for="">Publication category</label>
+            <label htmlFor="postImg">Add a picture</label>
+            <br />
+            <input
+              type="file"
+              name="postImg"
+              value=""
+              id="postImg"
+              className={styles.fileInput}
+            ></input>
+            <br />
+          </div>
+          <div className={styles.singleInput}>
+            <label htmlFor="">Publication category</label>
             <br />
             <div className={styles.radioBtns}>
               <label>
-                <input type="radio" name="radio" />
+                <input type="radio" name="categories" />
                 <span>Technology</span>
               </label>
               <label>
-                <input type="radio" name="radio" />
+                <input type="radio" name="categories" />
                 <span>Science</span>
               </label>
               <label>
-                <input type="radio" name="radio" />
+                <input type="radio" name="categories" />
                 <span>education</span>
               </label>
               <label>
-                <input type="radio" name="radio" />
+                <input type="radio" name="categories" />
                 <span>Cooking</span>
               </label>
               <label>
-                <input type="radio" name="radio" />
+                <input type="radio" name="categories" />
                 <span>Fashion</span>
               </label>
               <label>
-                <input type="radio" name="radio" />
+                <input type="radio" name="categories" />
                 <span>Free Category</span>
               </label>
               <br />
             </div>
           </div>
-          <div className={styles.singleInput}>
-            <label for="">Set your post to public</label>
-            <br />
-            <span className={styles.explain}>
-              If you set your publication to public, it means that anyone on{" "}
-              <b>logo name</b> can see it
-            </span>
-            <br />
-            <input name="" value=""></input>
-            <br />
+          <div className={styles.singleInput} id={styles.setToPublic}>
+            <div className={styles.labelInput}>
+              <label htmlFor="">Set your post to public</label>
+              <br />
+              <span className={styles.explain}>
+                If you set your publication to public, it means that anyone on{" "}
+                <b>logo name</b> can see it
+              </span>
+            </div>
+            <div className={styles.publicInput}>
+              <label>
+                <input type="radio" name="privacy" />
+                <span>Public</span>
+              </label>
+              <label>
+                <input type="radio" name="privacy" />
+                <span>Private</span>
+              </label>
+            </div>
           </div>
 
-          <button>Cancel</button>
-          <button>Publish</button>
+          <div className={styles.sbmitBtns}>
+            <button>Cancel</button>
+            <button id={styles.submit}>Publish</button>
+          </div>
         </form>
       </div>
     </>
