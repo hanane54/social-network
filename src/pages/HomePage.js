@@ -1,6 +1,6 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import Menu from '../components/menu/menu'
-import PostsList from '../components/feeds/postsList'
+import PostsList from '../components/posts/postsList'
 import ProfileSectionContainer from '../components/profileSection/profileSectionContainer';
 import RecentFollowers from '../components/followersSection/recentFollowersSection';
 

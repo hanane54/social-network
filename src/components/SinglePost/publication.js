@@ -1,6 +1,6 @@
 import styles from "./publication.module.css";
 import Image from "react-bootstrap/Image";
-import PostsData from "../feeds/postsData";
+import PostsData from "../posts/postsData";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import CommentIcon from "@mui/icons-material/Comment";
 import Comments from './Comments'
