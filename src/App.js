@@ -4,9 +4,10 @@ import {Routes, Route} from "react-router-dom";
 import Header from "./components/header/header";
 import HomePage from './pages/HomePage';
 import Signup from './pages/Signup';
-
 import PublicationPage from './pages/publicationPage'
 import CreatePostPage from './pages/CreatePostPage';
+import Login from './pages/Login';
+import ProfilePage from "./pages/ProfilePage"
 // import Menu from "./components/menu/menu";
 
 function App() {
@@ -21,9 +22,9 @@ function App() {
         <Route path="/post" exact element={<PublicationPage className="element"/>}/>
         <Route path="/create-post" exact element={<CreatePostPage className="element"/>}/>
         <Route path="/saved-post" exact element={<h2>this is the home page</h2>} />
-        <Route path="/login" exact element={<h2>this is the home page</h2>}/>
+        <Route path="/login" exact element={<Login/>}/>
         <Route path="/sign-up" exact element={<Signup/>}/>
-        <Route path="/my-profile" exact element={<h2>this is the home page</h2>}/>
+        <Route path="/my-profile" exact element={<ProfilePage/>}/>
         <Route path="/user" exact element={<h2>this is the home page</h2>}/>
       </Routes>
       </div>

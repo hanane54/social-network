@@ -12,7 +12,7 @@ export const MenuData=[
     {
         title:"Profile",
         icon: <PersonIcon/>,
-        link:"/myprofile"
+        link:"/my-profile"
     },
     {
         title:"Saved Posts",
