@@ -8,6 +8,7 @@ import PublicationPage from './pages/publicationPage'
 import CreatePostPage from './pages/CreatePostPage';
 import Login from './pages/Login';
 import ProfilePage from "./pages/ProfilePage"
+import UserSettings from "./pages/UserSettings"
 // import Menu from "./components/menu/menu";
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         {/* <Menu></Menu> */}
         <Routes>
         <Route path="/" exact element={<HomePage className="element"/>}/>
-        <Route path="/user-settings" exact element={<h2>this is the home page</h2>}/>
+        <Route path="/user-settings" exact element={<UserSettings className="element"/>}/>
         <Route path="/post" exact element={<PublicationPage className="element"/>}/>
         <Route path="/create-post" exact element={<CreatePostPage className="element"/>}/>
         <Route path="/saved-post" exact element={<h2>this is the home page</h2>} />

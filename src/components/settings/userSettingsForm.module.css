@@ -1,0 +1,59 @@
+.formContainer {
+  background-color: white;
+  margin-top: 8px;
+  margin-right: 20px;
+  border-radius: 20px;
+  padding: 20px 20px 25px 25px;
+  font-family: "karla";
+  margin-bottom: 20px;
+}
+.formContainer h3{
+  color: var(--fourth-color);
+  font-weight: bold;
+}
+.formContainer h5{
+    font-weight: bold;
+    margin-top: 10px;
+}
+.name{
+    margin-top: 20px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.Fname, .Lname{
+    display: flex;
+    flex-direction: column;
+}
+.userImage {
+    width: 55px;
+    height: 55px;
+    margin-right: 10px;
+    object-fit: cover;
+    border: 1px solid var(--fourth-color);
+  }
+.profilePic{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.profileImgBtns{
+    /* align-items: center; */
+    display: flex;
+    column-gap: 10px;
+}
+.row{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+.singleInput{
+    display: flex;
+    flex-direction: column;
+}
+.password{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
