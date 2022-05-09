@@ -15,6 +15,16 @@ export const MenuData=[
         link:"/my-profile"
     },
     {
+        title:"Profile",
+        icon: <PersonIcon/>,
+        link:"/my-profile/comments"
+    },
+    {
+        title:"Profile",
+        icon: <PersonIcon/>,
+        link:"/my-profile/questions"
+    },
+    {
         title:"Saved Posts",
         icon:<BookmarkAddedIcon/>,
         link:"/saved-posts"
