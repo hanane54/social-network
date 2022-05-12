@@ -27,7 +27,9 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "30px",
         color: "#FFFFFF",
         boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-        padding: "6px"
+        padding: "6px",
+        // fontFamily:"Ubuntu"
+
 
 
 
@@ -151,7 +153,7 @@ function Register() {
     return (
         <div className={classes.signup}>
             <div className={classes.welcome}>
-                Welcome to <span className={classes.logo}>Logo name</span>
+                Welcome to <span className={classes.logo}>Ask2get</span>
             </div>
             <div className={classes.container}>
                 <h1 className={classes.txt}>Create new account<span className={classes.point}>.</span></h1>
