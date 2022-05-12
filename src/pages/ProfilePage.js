@@ -1,10 +1,10 @@
 
-import ProfileContainer from "../components/profile/ProfileContainer";
+import Posts from "../components/profile/posts";
 const ProfilePage = () => {
     return(
         <>
     
-        <ProfileContainer></ProfileContainer>
+        <Posts></Posts>
     </>
     );
 }

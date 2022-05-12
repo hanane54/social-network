@@ -5,8 +5,10 @@ import Header from "../header/header";
 import Ads from '../menu/Ads';
 import UserInfoSection from './UserInfoSection';
 import UserNavigationSection from './UserNavigationSection';
+// import Post from '../posts/post';
+import PostsList from './postsList';
 
-const profileContainer = () => {
+const posts = () => {
     return (
     <>
         <Header />
@@ -20,6 +22,7 @@ const profileContainer = () => {
           <Col xs={10}>
             <UserInfoSection/>
             <UserNavigationSection/>
+            <PostsList></PostsList>
            </Col> 
           
         </Row>
@@ -27,4 +30,4 @@ const profileContainer = () => {
     </>
     );
   };
-  export default profileContainer;
+  export default posts;
