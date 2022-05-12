@@ -4,6 +4,7 @@ import profilePicture from "../assets/profile.jpg";
 import { Container, Row, Col } from "react-bootstrap";
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
+import { Link } from "react-router-dom";
 const ProfilePicCover = () => {
   return (
     <>
@@ -60,7 +61,7 @@ const ProfilePicCover = () => {
         </Row>
         <Row>
             <Col className={styles.editProfilBtn}>
-                <button>Edit Profile</button>
+                <Link to ="/user-settings"><button>Edit Profile</button></Link>
             </Col>
         </Row>
 

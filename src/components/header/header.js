@@ -111,12 +111,12 @@ const Header = () => {
               />
               <span className={classes.userName}>John Doe</span>
               <NavDropdown align="end" title="" className={classes.dropdownNav}>
-                <NavDropdown.Item href="#action/3.1">
+                <NavDropdown.Item href="/my-profile">
                   My profile page
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Settings</NavDropdown.Item>
+                <NavDropdown.Item href="/user-settings">Settings</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.3">Log Out</NavDropdown.Item>
+                <NavDropdown.Item href="/login">Log Out</NavDropdown.Item>
               </NavDropdown>
             </div>
           </Navbar.Brand>
