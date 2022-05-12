@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
         padding: "4px",
         textAlign: "center",
         margin: "auto",
-
+        // fontFamily:"poppins"
 
 
 
@@ -151,7 +151,7 @@ function Signin() {
     return (
         <div className={classes.signup}>
             <div className={classes.logo}>
-               Logo name
+            Ask2get
             </div>
             <div className={classes.container}>
                 <h1 className={classes.txt}>Login</h1>

@@ -70,7 +70,7 @@ const Header = () => {
       <Navbar bg="white" expand="lg" fixed="top" className={classes.navbar}>
         <Container fluid>
           <Navbar.Brand href="#">
-            <span className={classes.logo}>Logo</span>
+            <span className={classes.logo}>Ask2get</span>
           </Navbar.Brand>
           <Navbar.Brand>
             <Nav
