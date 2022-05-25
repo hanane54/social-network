@@ -1,0 +1,137 @@
+.formContainer {
+  background-color: white;
+  margin-top: 8px;
+  margin-right: 20px;
+  border-radius: 20px;
+  padding: 20px;
+  font-family: "karla";
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.userImage {
+  width: 55px;
+  height: 55px;
+  margin-right: 10px;
+  object-fit: cover;
+  border: 1px solid var(--fourth-color);
+}
+.userSection {
+  margin-bottom: 20px;
+}
+.explain {
+  color: var(--first-color);
+  font-weight: normal;
+}
+.singleInput {
+  margin: 10px 8px 10px 8px;
+}
+.radioBtns {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  width: 82%;
+}
+.radioBtns label, #setToPublic .publicInput label {
+  display: flex;
+  color: var(--first-color);
+  font-family: "karla";
+  align-items: center;
+  overflow: hidden;
+  transition: 00.25s ease;
+  background-color: var(--second-color);
+  margin: 0px 10px 0px 10px;
+  padding: 4px;
+  border-radius: 25px;
+}
+.radioBtns input:checked, #setToPublic .publicInput {
+  accent-color: var(--first-color);
+}
+.radioBtns span, #setToPublic .publicInput {
+  display: flex;
+  align-items: center;
+  padding: 0.375em 0.75em 0.375em 0.375em;
+  border-radius: 99em;
+  display: flex;
+  border-radius: 50%;
+  margin-right: 0.375em;
+  margin-left: 0.375em;
+  transition: 0.25s ease;
+}
+
+.radioBtns label:hover, #setToPublic .publicInput label:hover {
+  background-color: var(--fourth-color);
+  cursor: pointer;
+  color: white;
+}
+.question,
+.question:focus {
+  border: none;
+  background-color: var(--second-color);
+  border-radius: 25px;
+  padding: 7px;
+  width: 80%;
+  outline: none;
+}
+
+.articleText,
+.articleText:focus {
+  background-color: var(--second-color);
+  border: none;
+  border-radius: 25px;
+  width: 80%;
+  padding: 7px;
+  outline: none;
+}
+.fileInput {
+  background-color: var(--second-color);
+  padding: 8px;
+  width: 80%;
+  border-radius: 25px;
+  color: var(--first-color);
+  /* display: none; */
+}
+.singleInput input[type=file]::file-selector-button {
+  border: none;
+  padding: .2em .4em;
+  color: var(--first-color);
+  background-color: var(--second-color);
+}
+
+.singleInput input[type=file]::file-selector-button:hover {
+  cursor: pointer;
+}
+#setToPublic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 79%;
+}
+#setToPublic .publicInput label{
+  display: flex;
+  padding: 10px;
+  column-gap: 8px;
+}
+#setToPublic .publicInput span{
+  padding-right: 8px 0px 8px 0px;
+
+}
+.sbmitBtns{
+  width: 82%;
+  display: flex;
+  justify-content: center;
+  column-gap: 10%;
+  margin-top: 20px;
+}
+.sbmitBtns button{
+  padding: 3px 30px 3px 30px ;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-family: 'karla';
+  font-weight: bold;
+  background-color: var(--first-color);
+}
+#submit{
+  background-color: var(--fourth-color) !important;
+}

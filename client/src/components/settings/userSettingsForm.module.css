@@ -1,0 +1,148 @@
+.formContainer {
+  background-color: white;
+  margin-top: 8px;
+  margin-right: 40px;
+  border-radius: 20px;
+  padding: 20px 20px 20px 15%;
+  font-family: "karla";
+  margin-bottom: 20px;
+}
+
+.formContainer h3 {
+  color: var(--fourth-color);
+  font-weight: bold;
+  width: 80%;
+  text-align: center;
+}
+.formContainer h5 {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.name,
+.row {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 9%;
+}
+.name input,
+.name input:focus,
+.singleInput input,
+.singleInput input:focus {
+  background-color: var(--second-color);
+  border: none;
+  padding: 6px;
+  border-radius: 20px;
+  outline: none;
+}
+.password {
+  margin-top: 10px;
+}
+.password input,
+.password input:focus {
+  width: 45%;
+  background-color: var(--second-color);
+  outline: none;
+  border: none;
+  padding: 6px;
+  border-radius: 20px;
+}
+
+.name label,
+.aboutMe label,
+.singleInput label,
+.password label {
+  font-weight: bold;
+}
+.Fname,
+.Lname,
+.singleInput {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.aboutMe textarea,
+.aboutMe textarea:focus {
+  background-color: var(--second-color);
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  outline: none;
+  width: 80%;
+}
+.explain {
+  color: var(--first-color);
+}
+.userImage {
+  width: 55px;
+  height: 55px;
+  margin-right: 10px;
+  object-fit: cover;
+  border: 1px solid var(--fourth-color);
+}
+.chngPic {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.chngPic label {
+  font-weight: bold;
+}
+.profilePic {
+  margin-top: 5px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+}
+.profileImgBtns {
+  display: flex;
+  column-gap: 10px;
+}
+.profileImgBtns button {
+  background-color: var(--second-color);
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px 8px 20px;
+  color: var(--first-color);
+  transition: 1s;
+}
+.profileImgBtns button:hover {
+  background-color: var(--fourth-color);
+  color: white;
+}
+.row {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+.singleInput {
+  display: flex;
+  flex-direction: column;
+}
+.password {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.btns{
+    width: 80%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+.btns button{
+    padding: 3px 40px 3px 40px ;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-family: 'karla';
+  font-weight: bold;
+  background-color: var(--first-color);
+}
+#submit{
+    background-color: var(--fourth-color);
+}
