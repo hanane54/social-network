@@ -17,9 +17,19 @@ import ProfileHelpPage from './pages/ProfileHelpPage';
 // import Menu from "./components/menu/menu";
 
 function App() {
+  // example of how we can interact with node API by sending Http requests using userEffect method
+  // const [data, setData] = React.useState(null);
+
+  // React.useEffect(() => {
+  //   fetch("/api")
+  //     .then((res) => res.json())
+  //     .then((data) => setData(data.message));
+  // }, []);
   return (
     <>
       <div style={{paddingTop:'64px', backgroundColor:'#F7F5F2', zIndex:0}}>
+
+      {/* <p>{!data ? "Loading..." : data}</p> */} 
         {/* <Menu></Menu> */}
         <Routes>
         <Route path="/" exact element={<HomePage className="element"/>}/>

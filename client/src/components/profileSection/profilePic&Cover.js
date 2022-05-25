@@ -42,7 +42,7 @@ const ProfilePicCover = () => {
         <Row>
             <Col>
             <div className={styles.newPost} >
-                <a href="/" className={styles.placeholder}>Do you have any question John Doe?</a>
+                <a href="/create-post" className={styles.placeholder}>Do you have any question John Doe?</a>
             </div>
             </Col>
         </Row>
