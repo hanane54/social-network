@@ -30,10 +30,22 @@ const UserSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
+  country:{
+    type:String,
+  },
   joinedDate: {
     type: Date,
     default: Date.now,
   },
+  language:{
+    type:String,
+  },
+  followersNumber:{
+    type:Number,
+  },
+  followingNumber:{
+    type: Number,
+  }
 });
 
 User = mongoose.modle("user", UserSchema);
