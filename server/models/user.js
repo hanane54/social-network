@@ -14,6 +14,7 @@ const UserSchema = new mongoose.Schema({
     required: true,
     unique: true,
     lowercase: true,
+    match: /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
   },
   password: {
     type: String,
@@ -40,11 +41,11 @@ const UserSchema = new mongoose.Schema({
   language:{
     type:String,
   },
-  followersNumber:{
-    type:Number,
+  followers:{
+    type:[String],
   },
-  followingNumber:{
-    type: Number,
+  following:{
+    type: [String],
   }
 });
 

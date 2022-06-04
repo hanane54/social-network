@@ -1,10 +1,36 @@
-const express = require("express")
+const express = require("express");
+const req = require("express/lib/request");
 const router = express.Router();
 const Post = require('../models/post');
 const User = require('../models/user');
 
 // here will be defined the methods handling
 // the posts
+
+/**
+ * @route POST api/posts
+ * @desc creates a new post using the POST method
+ * @access Public
+ */
+router.post('/', async(request, response)=>{
+    const newPost = new Post({
+        postOwner:request.body.postOwner,
+        postQuestion: request.post.postQuestion,
+        postContent: request.body.postContent,
+        postImage: request.body.postContent || null,
+        postCategory: request.body.postCategory,
+        isPublic: request.body.isPublic,
+        comments:[],
+        likers:[],
+        date: new Date().getTime(),
+    });
+    try {
+        const post = await newPost.save();
+        return response.status(201).json(post);
+    }catch(error){
+        return response.status(400).send(error);
+    }
+});
 
 
 /**
@@ -13,7 +39,7 @@ const User = require('../models/user');
  * @access Private
  * 
  */
-router.get(async(request, response)=>{
+router.get('/' ,async(request, response)=>{
     try{
         const posts = await Post.find().sort({date: -1});
         response.json(posts);
@@ -59,3 +85,50 @@ router.delete(async(request, response)=> {
         response.status(500).send("Server has encountered an unexpected condition!");
     }
 });
+
+/**
+ * @route PATCH api/posts/like/:id
+ * @desc like a post using its ID
+ * @access Private
+ */
+router.patch('/like/:id', (request, response)=> {
+    const {id } = request.params.id;
+    
+    
+
+    try{
+        const post = await Post.findById(id);
+
+        // we first of all need to see if the post 
+        // is already liked by the current user or not
+        if(post.likes.some((like)=> like.user.toString() === request.user.id)){
+            return response.status(400).json({message: 'You already liked this post'});
+        }
+        post.likers.unshift({user: req.user.id});
+
+        await post.save();
+        return response.json(post.likers);
+
+    } catch (error){
+        console.log(error.message);
+        response.status(500).send("Server has encountered an unexpected condition!");
+    }
+})
+
+
+/**
+ * @route PATCH api/unlike/:id
+ * @desc Unlike a post
+ * @access Private
+ */
+router.patch('/unlike/:id', (request, response)=> {
+    try{
+        const post = await Post.findById(request.user.id);
+        if( (post.likers.map((liker) => liker.user.toString() === request.user.id)) ){
+            return response.status(400).json({message: 'This post is not liked'});
+        }
+        
+    } catch (error){
+
+    }
+})

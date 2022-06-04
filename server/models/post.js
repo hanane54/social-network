@@ -28,9 +28,16 @@ const PostSchema = new Schema({
     type: Date,
     default: Date.now,
   },
-  likesNumber: {
-    type: Number,
-    default: 0,
+  likers: [
+    {
+      user: {
+        type: Schema.Types.ObjectId
+      }
+    }
+  ],
+  likesNumber:{
+    type:Number,
+    required:true
   },
   commentsNumber: {
     type: Number,
