@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
@@ -150,6 +150,27 @@ const useStyles = makeStyles((theme) => ({
 }));
 function Register() {
     const classes = useStyles();
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword]= useState("");
+    const [password2, setPassword2]= useState("");
+
+    const nameHandler = (event) => {
+        setName(event.target.value);
+    }
+
+    const emailHandler = (event) => {
+        setEmail(event.target.value);
+    }
+
+    const passwordHandler = (event) => {
+        setEmail(event.target.value);
+    }
+
+    const password2Handler=(event)=>{
+        setPassword2(event.target.value);
+    }
+
     return (
         <div className={classes.signup}>
             <div className={classes.welcome}>

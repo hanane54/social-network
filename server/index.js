@@ -1,28 +1,38 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
-require("dotenv/config");
+
+const connectDB = require("./config/db");
+
+var cors = require('cors')
 
 const app = express();
 
-// DB Connection
-mongoose.connect(process.env.DB_URI, {useNewUrlParser:true, useUnifiedTopology:true})
-.then( () => {
-  console.log('DB Connected');
-})
-.catch( (err) => {
-  console.log(err);
-});
+const path = require("path");
 
+//connect database
+connectDB();
 
+//Init Middleware
+app.use(express.json({ extended: false }));
+app.use(cors());
 
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => {
-  console.log(`Server listening on ${PORT}`);
-});
+// app.get('/', (req, res) => res.send('API Running'));
 
-// here we can add methods that can perform a mission (send a response) when we access a route.
-// it should be above the app.listen
-// app.get("/api", (req, res) => {
-//     res.json({ message: "Hello from server!" });
-//   });
+//define routes
+app.use("/api/users", require("./routes/api/users"));
+app.use("/api/auth", require("./routes/api/auth"));
+app.use("/api/profile", require("./routes/api/profile"));
+app.use("/api/posts", require("./routes/api/posts"));
+
+// Serve static assetes in production
+if (process.env.NODE_ENV === "production") {
+  //set static folder
+  app.use(express.static("client/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));

@@ -1,0 +1,7 @@
+{
+    "mongoURI": "mongodb+srv://mini-project:lakmouritaouil@clusternodejs.yurlm.mongodb.net/social-network-db?retryWrites=true&w=majority",
+    "jwtSecrete": "mysecrettoken",
+    "CLOUDINARY_NAME":"socialnetworkaseds",
+    "CLOUDINARY_API_KEY":"791949556712446",
+    "CLOUDINARY_API_SECRET":"ij4QOKt8UjCu_fG47qokomXxp2I"
+}
